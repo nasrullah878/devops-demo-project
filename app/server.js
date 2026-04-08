@@ -9,7 +9,7 @@ client.collectDefaultMetrics();
 
 // Home route
 app.get("/", (req, res) => {
-    res.send("Hello from DevOps CI/CD Pipeline 🚀");
+    res.send("H_Hello from DevOps CI/CD Pipeline 🚀");
 });
 
 // Health check route
@@ -23,6 +23,6 @@ app.get("/metrics", async (req, res) => {
     res.end(await client.register.metrics());
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0" ,() => {
     console.log(`Server running on port ${PORT}`);
 });
